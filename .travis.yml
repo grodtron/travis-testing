@@ -6,11 +6,11 @@ branches:
   only: master
 
 matrix:
-  env:
-    - COMPILER=g++-4.8
-    - COMPILER=g++-5
-    - COMPILER=clang++-3.5
-    - COMPILER=clang++-3.3
+  include:
+    - env: COMPILER=g++-4.8
+    - env: COMPILER=g++-5
+    - env: COMPILER=clang++-3.5
+    - env: COMPILER=clang++-3.3
 
 before_install:
   # Somewhat of a hack to use trusty sources.
