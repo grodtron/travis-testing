@@ -31,6 +31,7 @@ before_install:
   - sudo apt-get install -q -y cmake libyaml-cpp-dev libboost-dev
 
 install:
+  - cmake --version
   - CXX=$COMPILER cmake .
   - make
 
