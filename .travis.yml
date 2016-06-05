@@ -10,7 +10,6 @@ matrix:
     - env: COMPILER=g++-4.8
     - env: COMPILER=g++-5
     - env: COMPILER=clang++-3.5
-    - env: COMPILER=clang++-3.3
 
 before_install:
   # Somewhat of a hack to use trusty sources.
@@ -21,7 +20,6 @@ before_install:
   - if [[ $COMPILER == g++-4.8     ]]; then sudo apt-get install -q -y g++-4.8;     fi
   - if [[ $COMPILER == g++-5       ]]; then sudo apt-get install -q -y g++-5;       fi
   - if [[ $COMPILER == clang++-3.5 ]]; then sudo apt-get install -q -y clang++-3.5; fi
-  - if [[ $COMPILER == clang++-3.3 ]]; then sudo apt-get install -q -y clang++-3.3; fi
   - sudo apt-get install -q -y cmake libyaml-cpp-dev libboost-dev
 
 install:
