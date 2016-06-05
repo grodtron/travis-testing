@@ -27,7 +27,7 @@ before_install:
   - if [[ $COMPILER == g++-4.8     ]]; then sudo apt-get install -q -y g++-4.8;     fi
   - if [[ $COMPILER == g++-5       ]]; then sudo apt-get install -q -y g++-5;       fi
   - if [[ $COMPILER == clang++-3.5 ]]; then sudo apt-get install -q -y clang++-3.5; fi
-  - sudo apt-get install -q -y cmake libyaml-cpp-dev
+  - sudo apt-get install -q -y cmake libyaml-cpp-dev libboost-dev
 
 install:
   - CXX=$COMPILER cmake .
