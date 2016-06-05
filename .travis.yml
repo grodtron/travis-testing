@@ -25,6 +25,7 @@ before_install:
   - sudo sed -i 's/precise/trusty/g' /etc/apt/sources.list.d/trusty.list
   - sudo apt-get update -qq -y
   - if [[ $COMPILER == g++-4.8     ]]; then sudo apt-get install -q -y g++-4.8;     fi
+  - if [[ $COMPILER == g++-5       ]]; then sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y; fi
   - if [[ $COMPILER == g++-5       ]]; then sudo apt-get install -q -y g++-5;       fi
   - if [[ $COMPILER == clang++-3.5 ]]; then sudo apt-get install -q -y clang++-3.5; fi
   - sudo apt-get install -q -y cmake libyaml-cpp-dev libboost-dev
